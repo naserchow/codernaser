@@ -1,0 +1,60 @@
+body{
+    background: #fff;
+    display: flex;
+    
+}
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#welcome{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 25px;
+    background: #787878;
+    padding-top: 30px;
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .static-txt{
+    font-size: 60px;
+    color: #fff;
+
+}
+.wrapper .dynamic-txt{
+    height: 40px;
+    line-height: 40px;
+    font-size: 40px;
+}
+.dynamic-txt li{
+    list-style: none;
+    font-size: 40px;
+    color: coral;
+    text-transform: uppercase;
+
+}
+.dynamic-txt li span{
+  position: relative;
+}
+.dynamic-txt li span::after{
+    content:"";
+    color: coral;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: typing 5s steps(8) infinite;
+    text-transform: capitalize;
+    background: #787878;
+}
+@keyframes typing
+{
+    100%{
+        left:100%;
+    }
+}
